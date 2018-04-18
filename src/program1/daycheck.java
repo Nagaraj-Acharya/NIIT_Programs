@@ -2,6 +2,7 @@ package program1;
 
 //import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 //import java.util.Date;
@@ -18,12 +19,12 @@ public static void main (String args[])
 	System.out.println("Enter the date-");
 	dd=sc.nextInt();
 	System.out.println("Enter the month-");
-	//mm=sc.nextInt()-1;
-	mm=sc.nextInt();
+	mm=sc.nextInt()-1;
+	//mm=sc.nextInt();
 	System.out.println("Enter the year-");
 	yy=sc.nextInt();
 	
-	Date date=(new GregorianCalendar(yy,mm,dd)).getTime();
+	Calendar date=(new GregorianCalendar(yy,mm,dd)).getInstance();
 	SimpleDateFormat f= new SimpleDateFormat("EEEE");
 	String dd1= f.format(dd);
 	System.out.println(dd1);

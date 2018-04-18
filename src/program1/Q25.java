@@ -5,6 +5,23 @@ import java.util.Scanner;
 public class Q25 
 {
 
+	public static void main(String arg[]){
+		String str,rev="";
+		System.out.println("enter a string");
+		Scanner s1=new Scanner(System.in);
+		str=s1.next();
+		int length=str.length();
+		for(int i=length-1;i>=0;i--)
+			rev=rev+str.charAt(i);
+			if(str.equals(rev)){
+				System.out.println("palindrome" +str);
+			}else{
+			System.out.println("not palindrome::" +str);
+			}
+			System.out.println("vowels in string::"+count_vowels(str));	
+	        }
+	
+	
 	public static int count_vowels(String str)
 	{
 		boolean b=true;
@@ -19,22 +36,5 @@ public class Q25
 		}
 		return count;
 	}
-	
-	public static void main(String[] args) 
-	{
-		String str;
-		Scanner sc =new Scanner(System.in);
-		
-		System.out.println("Enter the string::");
-		str=sc.nextLine();
-		
-		System.out.println("vowels in string::"+count_vowels(str));
-
-		
-		
-	}
-	
-	
-	
 
 }
